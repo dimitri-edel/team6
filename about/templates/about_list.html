@@ -1,6 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}About Profiles{% endblock %}
+
+{% block content %}
 <h1>About Profiles</h1>
 <ul>
-    {% for about_profile in about_profiles %}
+  {% for about_profile in about_profiles %}
     <li><a href="{% url 'about_detail' about_profile.pk %}">{{ about_profile.name }}</a></li>
-    {% endfor %}
+  {% endfor %}
 </ul>
+{% endblock %}

@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  font-family: 'Press Start 2P', monospace;
+  background-color: #1a1a1a;
+  background-image: url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
+  background-repeat: repeat;
+  color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  text-align: center;
+  margin-top: 20px;
+  background-color: #000;
+  padding: 12px;
+  border-top: 4px double #00ffff;
+  border-bottom: 4px double #00ffff;
+}
+
+nav a {
+  font-size: 0.7rem;
+  color: #00ffff;
+  margin: 0 15px;
+  text-decoration: none;
+  text-shadow: 1px 1px #000;
+}
+
+nav a:hover {
+  color: #ff00ff;
+}
+
+
+section {
+  background-color: #111;
+  border: 3px solid #00ffff;
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  box-shadow: 8px 8px 0 #ff00ff;
+}
+
+section h1, section h2 {
+  color: #00ffff;
+  font-size: 1rem;
+  text-align: center;
+}
+
+section p {
+  font-size: 0.7rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}

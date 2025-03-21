@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+    <section>
+      <h1>🚀 Rippley: Women in Tech</h1>
+      <h2>Honoring the Pioneers Who Helped Shape Our Digital World</h2>
+
+      <p>Technology as we know it today exists because of the brilliant minds who dared to innovate, break barriers, and push boundaries. Among these pioneers are extraordinary women in tech—mathematicians, engineers, programmers, and visionaries—who have shaped the world through their expertise and dedication.</p>
+
+      <p>At <strong>Rippley</strong>, we believe their stories should be known, their contributions celebrated, and their legacies carried forward. Our Fore’Women—from <strong>Ada Lovelace</strong>, the first computer programmer, to <strong>Radia Perlman</strong>, the architect of modern networking—have paved the way for innovation.</p>
+
+      <p>Their impact extends across generations, from the codebreakers of World War II to today’s leaders in artificial intelligence, cybersecurity, and digital technology. They have built the foundations of computing, launched us to the moon, secured our digital networks, and continue to redefine what is possible.</p>
+
+      <p>Many of these trailblazing women overcame immense challenges—facing gender discrimination, lack of recognition, and barriers to education. Yet, their brilliance and persistence ensured that their work not only endured but thrived, influencing every aspect of the tech-driven world we live in today.</p>
+
+      <p><strong>At Rippley</strong>, we honor these pioneers by sharing their stories, their struggles, and their triumphs. Our platform is designed to educate, inspire, and engage—because learning history isn’t just about the past, it’s about shaping the future.</p>
+
+      <h2>🎯 Test Your Knowledge & Discover the Women Who Revolutionized Tech</h2>
+
+      <p>Get to know the women who transformed technology and continue to shape the industry today. Explore their achievements, learn about their lives, and test your knowledge with interactive quizzes that challenge and inspire.</p>
+
+      <p>Whether you’re a student, a tech enthusiast, or simply curious about the hidden figures of computing history, Rippley is your gateway to understanding the power and influence of women in technology.</p>
+
+      <p><strong>Because of them, technology is what it is today. Because of them, the future is limitless.</strong></p>
+
+      <p>Join us in celebrating our pioneers, our women, our future. Start your journey, explore their stories, and take the challenge—how much do you know about the women who shaped technology?</p>
+
+      <p><strong>Learn. Honor. Test. Be inspired. Welcome to Rippley: Women in Tech.</strong></p>
+    </section>
+  <ul>
+    <li><a href="{% url 'about_list' %}">Browse Profiles</a></li>
+    <li><a href="{% url 'quiz_list' %}">Try a Quiz</a></li>
+    <li><a href="{% url 'category_list' %}">View Categories</a></li>
+  </ul>
+{% endblock %}
