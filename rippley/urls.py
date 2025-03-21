@@ -16,10 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.shortcuts import redirect
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('categories/', include('category.urls')),
     path('about/', include('about.urls')),
     path('quizzes/', include('quiz.urls')),
+    path('', lambda request: redirect('categories/', permanent=False)),  # Redirect root to categories
 ]
