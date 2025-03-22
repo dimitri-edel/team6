@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Quiz Result</h1>
+
+<h3>{{ quiz.question }}</h3>
+
+<p><strong>Your answer:</strong> {{ selected_option_text }}</p>
+
+{% if is_correct %}
+    <p><strong>Correct!</strong> Great job!</p>
+{% else %}
+    <p><strong>Incorrect.</strong> The correct answer was: {{ correct_option_text }}</p>
+{% endif %}
+
+<a href="{% url 'quiz_list' %}">Back to Quizzes</a>
+{% endblock %}
