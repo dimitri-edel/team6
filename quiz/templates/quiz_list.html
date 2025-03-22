@@ -1,10 +1,42 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 
 {% block content %}
-<h1>Quiz</h1>
-<ul>
-    {% for quiz in quizzes %}
-    <li>{{ quiz.question }}</li>
-    {% endfor %}
-</ul>
+<h1>Quizzes</h1>
+
+{% if quizzes %}
+    <form method="post" action="{% url 'quiz_submit_all' %}">
+        {% csrf_token %}
+
+        {% for quiz in quizzes %}
+            <div>
+                <h3>{{ quiz.about.name }} Quiz</h3>
+                <h4>{{ quiz.question }}</h4>
+
+                <input type="hidden" name="quiz_ids" value="{{ quiz.id }}">
+
+                <div>
+                    <input type="radio" name="answer_{{ quiz.id }}" id="option1_{{ quiz.id }}" value="option1" required>
+                    <label for="option1_{{ quiz.id }}">{{ quiz.option1 }}</label>
+                </div>
+                <div>
+                    <input type="radio" name="answer_{{ quiz.id }}" id="option2_{{ quiz.id }}" value="option2">
+                    <label for="option2_{{ quiz.id }}">{{ quiz.option2 }}</label>
+                </div>
+                <div>
+                    <input type="radio" name="answer_{{ quiz.id }}" id="option3_{{ quiz.id }}" value="option3">
+                    <label for="option3_{{ quiz.id }}">{{ quiz.option3 }}</label>
+                </div>
+                <div>
+                    <input type="radio" name="answer_{{ quiz.id }}" id="option4_{{ quiz.id }}" value="option4">
+                    <label for="option4_{{ quiz.id }}">{{ quiz.option4 }}</label>
+                </div>
+            </div>
+            <hr>
+        {% endfor %}
+
+        <button type="submit">Submit All Answers</button>
+    </form>
+{% else %}
+    <p>No quizzes available.</p>
+{% endif %}
 {% endblock %}

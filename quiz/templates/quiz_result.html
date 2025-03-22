@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Quiz Results</h1>
+
+<div>
+    <h2>Your Score: {{ correct_count }} out of {{ total_questions }}</h2>
+    
+    {% for result in results %}
+    <div>
+        <h3>{{ result.quiz.about.name }} Quiz</h3>
+        <h4>{{ result.quiz.question }}</h4>
+        
+        <p><strong>Your answer:</strong> {{ result.selected_text }}</p>
+        
+        {% if result.is_correct %}
+            <p><strong>Correct!</strong> Great job!</p>
+        {% else %}
+            <p><strong>Incorrect.</strong> The correct answer was: {{ result.correct_text }}</p>
+        {% endif %}
+    </div>
+    <hr>
+    {% endfor %}
+    
+    <a href="{% url 'quiz_list' %}">Take Quiz Again</a>
+</div>
+{% endblock %}
