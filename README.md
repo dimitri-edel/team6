@@ -1,4 +1,4 @@
-# team6
+# RIPPLEY
 
 ## Deployed page
 [deployed page](https://rippley-c75929cecc2a.herokuapp.com/)
