@@ -1,31 +1,157 @@
+/* Desktop Background */
 .desktop-background {
   height: 100vh;
-  background-image: url('/static/images/win98-desktop.jpg');
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(135deg, #1a1a1a, #4b0082); /* Subtle gradient background */
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 20px;
 }
 
 .landing-screen {
-  width: 400px;
-  max-width: 90%;
+  width: 80%;
+  max-width: 600px;
+  border: 3px solid var(--color-teal); /* Retro teal border */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  overflow: hidden;
 }
 
-.landing-body {
-  text-align: center;
-  padding: 1rem;
+.title-bar {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.btn-explore {
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
+.title-bar-text {
+  font-size: 1.2rem;
   font-weight: bold;
-  background: #008080;
-  color: white;
+}
+
+.title-bar-controls button {
+  background-color: var(--color-teal);
   border: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
   cursor: pointer;
-  border-radius: 3px;
+}
+
+.window-body {
+  padding: 20px;
+  text-align: center;
+  color: var(--color-white);
+}
+/* Explore the Site Button */
+.btn-explore {
+  background-color: #007BFF; /* Blue background for the button */
+  color: #fff; /* White text */
+  border: none; /* Remove border */
+  padding: 15px 30px; /* Add padding for a larger button */
+  font-size: 1.2rem; /* Increase font size */
+  font-family: 'Courier New', Courier, monospace; /* Retro font */
+  cursor: pointer;
+  border-radius: 8px; /* Rounded corners */
+  transition: all 0.3s ease; /* Smooth hover effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.btn-explore:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  color: #fff; /* Keep text white */
+  transform: translateY(-3px); /* Slight lift on hover */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+
+/* Info Section */
+.info-section {
+  padding: 40px 20px;
+  background-color: var(--color-dark); /* Dark background for the section */
+  color: var(--color-white);
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+  gap: 20px; /* Spacing between cards */
+}
+
+.info-card {
+  background-color: #000; /* Black background for cards */
+  border: 2px solid var(--color-primary); /* Bright orange border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.info-card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 0 15px var(--color-primary); /* Glow effect on hover */
+}
+
+.info-card h3, .info-card h4 {
+  font-family: 'Courier New', Courier, monospace; /* Retro font */
+  color: var(--color-primary); /* Bright orange for headings */
+  margin-bottom: 10px;
+}
+
+.info-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-white);
+  margin-bottom: 10px;
+}
+
+.resources-card ul {
+  list-style: none; /* Remove default bullet points */
+  padding: 0;
+}
+
+.resources-card ul li {
+  margin: 10px 0;
+}
+
+.resources-card ul li a {
+  color: var(--color-hover); /* Neon cyan for links */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.resources-card ul li a:hover {
+  color: var(--color-primary); /* Bright orange on hover */
+  text-shadow: 0 0 5px var(--color-primary); /* Glow effect on hover */
+}
+/* Helpful Resources Section */
+.resources-card h4 {
+  font-size: 1.5rem; /* Increase font size */
+  color: #007BFF; /* Blue color for the heading */
+  margin-bottom: 15px;
+  text-transform: uppercase; /* Make the text uppercase for emphasis */
+  font-family: 'Courier New', Courier, monospace; /* Retro font */
+}
+
+.resources-card ul {
+  list-style: none; /* Remove default bullet points */
+  padding: 0;
+}
+
+.resources-card ul li {
+  margin: 10px 0;
+}
+
+.resources-card ul li a {
+  color: #007BFF; /* Blue color for links */
+  text-decoration: none; /* Remove underline */
+  font-size: 1.1rem; /* Slightly larger font size */
+  font-weight: bold;
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.resources-card ul li a:hover {
+  color: #0056b3; /* Darker blue on hover */
+  text-shadow: 0 0 5px #0056b3; /* Glow effect on hover */
 }
