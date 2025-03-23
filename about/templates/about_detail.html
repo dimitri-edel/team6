@@ -1,5 +1,28 @@
-<h1>{{ about_profile.name }}</h1>
-<p>{{ about_profile.contribution }}</p>
-{% if about_profile.image %}
-<img src="{{ about_profile.image.url }}" alt="{{ about_profile.name }}">
-{% endif %}
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{{ about_profile.name }} | Profile{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="desktop-background">
+  <div class="landing-screen window">
+    <div class="title-bar">
+      <div class="title-bar-text">{{ about_profile.name }}</div>
+      <div class="title-bar-controls">
+        <button aria-label="Close"></button>
+      </div>
+    </div>
+    <div class="window-body landing-body">
+      {% if about_profile.image %}
+        <img src="{{ about_profile.image.url }}" alt="{{ about_profile.name }}" class="profile-img" style="max-width: 300px; width: 100%; border: 2px solid var(--color-primary); border-radius: 8px; margin-bottom: 1rem;">
+      {% endif %}
+      <p>{{ about_profile.contribution }}</p>
+      <a href="{% url 'about_list' %}" class="btn" style="margin-top: 1rem; display: inline-block;">Back to Profiles</a>
+    </div>
+  </div>
+</section>
+{% endblock %}
