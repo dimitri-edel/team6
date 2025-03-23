@@ -1,38 +1,295 @@
+/* Root Variables for Colors */
+:root {
+  --color-primary: #FFB722; /* Bright orange */
+  --color-secondary: #BB6E3A; /* Muted brown */
+  --color-accent: #D4CA9D; /* Soft beige */
+  --color-dark: #463F44; /* Dark gray */
+  --color-background: #1a1a1a; /* Dark background */
+  --color-white: #ffffff; /* White */
+  --color-hover: #00ffff; /* Neon cyan for hover effects */
+}
+
+/* General Styles */
 body {
-  font-family: "Pixelated MS Sans Serif", Arial;
-  background-color: silver;
-  color: #333;
+  font-family: 'Courier New', Courier, monospace; /* Retro font */
+ 
+  color: var(--color-white);
   margin: 0;
   padding: 0;
 }
 
-.tabs-right {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.tabs-right menu {
-  padding-top: 0.2rem;
-  display: flex;
-  gap: 0.5rem;
-  list-style: none;
-}
-
-.tabs-right [role="tab"] {
-  padding: 0.3rem 0.8rem;
-  background-color: #e0e0e0;
-  border: 2px solid #fff;
-  border-bottom: none;
-}
-
-.tabs-right [role="tab"][aria-selected="true"] {
-  background-color: white;
-  border-color: #fff #808080 white #fff;
-}
-
-footer {
+/* Header Styles */
+.retro-header {
+  background-image: url('/static/images/over-the-yearsii.jpg'); /* Add your header image */
+  background-size: cover; /* Ensures the image covers the entire header */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: top center; /* Centers the image horizontally and vertically */
+  color: var(--color-white);
   text-align: center;
-  padding: 1rem;
+  padding: 50px 20px; /* Adjust padding for better spacing */
+  height: 250px; /* Set a fixed height for the header */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Navigation Menu */
+.retro-menu {
+  background-color: var(--color-dark);
+  border: 2px solid var(--color-teal);
+  border-radius: 8px;
+  padding: 5px 0;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 1200px;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 0 15px rgba(0, 255, 221, 0.4);
+  overflow: hidden;
+}
+.retro-menu::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.1) 50%,
+    transparent 51%,
+    transparent 100%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.3;
+}
+/* Glow animation for the border */
+.retro-menu::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, 
+    var(--color-teal), 
+    var(--color-hover), 
+    var(--color-primary), 
+    var(--color-hover), 
+    var(--color-teal));
+  background-size: 400% 400%;
+  z-index: -1;
+  filter: blur(5px);
+  animation: glowBorder 8s ease infinite;
+  opacity: 0.7;
+  border-radius: 10px;
+}
+
+@keyframes glowBorder {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
+.retro-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  position: relative;
+  z-index: 3;
+}
+
+.retro-menu li {
+  display: inline;
+  position: relative;
+  padding: 5px;
+}
+
+.retro-menu a {
+  display: block;
+  text-decoration: none;
+  color: var(--color-teal);
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: all 0.4s ease;
+  border: 1px solid transparent;
+  text-shadow: 0 0 5px rgba(0, 255, 221, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated cursor effect */
+.retro-menu a::after {
+  position: absolute;
+  right: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  animation: blink 1s step-end infinite;
+}
+
+.retro-menu a:hover::after {
+  opacity: 1;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Hover effect */
+.retro-menu a:hover {
+  background-color: rgba(0, 255, 255, 0.2);
+  color: var(--color-white);
+  border-color: var(--color-hover);
+  box-shadow: 0 0 15px var(--color-hover);
+  transform: translateY(-3px);
+  padding-right: 30px; /* Make room for cursor */
+}
+
+/* Digital noise effect on hover */
+.retro-menu a:hover::before {
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.1;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Active page indicator */
+.retro-menu a.active {
+  background-color: var(--color-primary);
+  color: var(--color-dark);
+  box-shadow: 0 0 15px rgba(255, 183, 34, 0.6);
+  border-color: var(--color-primary);
+  font-weight: bold;
+  padding-left: 30px;
+}
+
+/* Active page indicator - terminal prompt */
+.retro-menu a.active::before {
+  position: absolute;
+  left: 12px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .retro-menu ul {
+    flex-wrap: wrap;
+  }
+  
+  .retro-menu li {
+    flex: 1 1 40%;
+    min-width: 120px;
+  }
+  
+  .retro-menu a {
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .retro-menu {
+    width: 95%;
+  }
+  
+  .retro-menu li {
+    flex: 1 1 100%;
+  }
+}
+
+/* Retro Main Section */
+.retro-main {
+  background: linear-gradient(135deg, #BB6E3A, #4b0082); /* Subtle gradient background */
+  padding: 40px 20px;
+  border-radius: 8px; /* Rounded corners for a retro feel */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  margin: 20px auto;
+  width: 90%; /* Center the section and limit its width */
+  color: var(--color-white);
+  text-align: center;
+}
+
+/* Main Content Section */
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #000; /* Retro black background */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+/* Typography */
+.main-content h1, .main-content h2, .main-content h3 {
+  font-family: 'Courier New', Courier, monospace; /* Retro font */
+  color: var(--color-primary); /* Bright orange for headings */
+  margin-bottom: 20px;
+}
+
+.main-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--color-white);
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.main-content .btn {
+  background-color: var(--color-primary);
+  color: var(--color-dark);
+  border: none; /* Removed border */
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.main-content .btn:hover {
+  background-color: var(--color-hover);
+  color: var(--color-dark);
+  box-shadow: 0 0 10px var(--color-hover);
+}
+
+/* Footer Styles */
+.retro-footer {
+  background-color: var(--color-dark);
+  color: var(--color-accent);
+  text-align: center;
+  padding: 20px;
   font-size: 0.9rem;
-  color: #777;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .retro-menu ul {
+    flex-direction: column; /* Stack menu items vertically on smaller screens */
+    gap: 10px;
+  }
+
+  .retro-main {
+    width: 95%; /* Adjust width for smaller screens */
+  }
 }
