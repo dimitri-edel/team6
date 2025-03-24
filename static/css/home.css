@@ -1,7 +1,7 @@
  
 /* Profile Section */
 .profile-section {
-  padding: 40px 20px;
+  padding: 40px 20px; 
   background: linear-gradient(135deg, #f5f5f5, #eaeaea); /* Subtle gradient background */
   text-align: center;
   margin-bottom: 30px;
@@ -10,11 +10,11 @@
 }
 
 .profile-section h2 {
-  font-size: 3rem;
+  font-size: 3rem;  
   margin-bottom: 30px;
   font-family: 'Courier New', Courier, monospace; /* Retro font */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for emphasis */
-  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0); /* Add a subtle shadow for emphasis */
+  margin-top: 5px;
   text-transform: uppercase; /* Make the text uppercase for a bold look */
   letter-spacing: 2px; /* Add spacing between letters for a retro feel */
 }
@@ -35,6 +35,7 @@
   border-radius: 8px; /* Rounded corners */
   padding: 20px;
   width: 250px; /* Fixed width for cards */
+  height: 300px; /* Fixed height for uniformity */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
@@ -47,11 +48,12 @@
 
 /* Profile Card Image */
 .profile-card img {
-  width: 100%; /* Make the image responsive */
-  height: 200px; /* Fixed height for uniformity */
+  width: 240px; /* Make the image responsive */
+  max-height: 240px; /* Fixed height for uniformity */
   object-fit: cover !important; /* Ensure the image fits within the dimensions */
   border-radius: 8px; /* Match the card's rounded corners */
   margin-bottom: 15px;
+  margin: 0 auto; /* Center the image */
 }
 
 

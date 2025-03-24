@@ -16,7 +16,7 @@
   {% for about_profile in about_profiles %}
     <div class="info-card">
       <h3><a href="{% url 'about_detail' about_profile.pk %}">{{ about_profile.name }}</a></h3>
-      <p>{{ about_profile.contribution|truncatechars:200 }}</p>
+      <p>{{ about_profile.contribution|truncatechars:100 }}</p>
     </div>
   {% endfor %}
 </section>
