@@ -1,44 +1,73 @@
 {% extends "base.html" %}
 {% block title %}Our Team | Women in Tech{% endblock %}
 
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/team.css' %}">
+{% endblock %}
+
 {% block content %}
   <h2>Meet the Team</h2>
   <div class="team-grid">
     <div class="member">
-      <h3>Johnny</h3>
+      <h3>Dimitri Edel</h3>
+      <img src="{% static 'images/team/dimitri.png' %}" alt="Dimitri Edel" onerror="this.src='{% static 'images/team/placeholder.jpg' %}'" width="150">
       <p>Fullstack</p>
-      <a href="https://github.com/JohnnySonTrinh" target="_blank">GitHub</a> |
-      <a href="https://www.linkedin.com/in/johnny-trinh-dev/" target="_blank">LinkedIn</a>
+      <div class="member-links">
+        <a href="https://github.com/dimitri-edel" target="_blank" class="button">GitHub</a>
+        <a href="https://www.linkedin.com/in/dimitri-edel-26a5022a9/" target="_blank" class="button">LinkedIn</a>
+      </div>
     </div>
+
+    <div class="member">
+      <h3>Johnny Trinh</h3>
+      <img src="{% static 'images/team/johnny.png' %}" alt="Johnny Trinh" onerror="this.src='{% static 'images/team/placeholder.jpg' %}'" width="150">
+      <p>Fullstack</p>
+      <div class="member-links">
+        <a href="https://github.com/JohnnySonTrinh" target="_blank" class="button">GitHub</a>
+        <a href="https://www.linkedin.com/in/johnny-trinh-dev/" target="_blank" class="button">LinkedIn</a>
+      </div>
+    </div>
+    
     <div class="member">
       <h3>Katarina Kilian</h3>
+      <img src="{% static 'images/team/katarina.jpg' %}" alt="Katarina Kilian" onerror="this.src='{% static 'images/team/placeholder.jpg' %}'" width="150">
       <p>Fullstack</p>
-      <a href="https://github.com/kakilian" target="_blank">GitHub</a> |
-      <a href="https://www.linkedin.com/in/katarina-kilian-645242313/" target="_blank">LinkedIn</a>
+      <div class="member-links">
+        <a href="https://github.com/kakilian" target="_blank" class="button">GitHub</a>
+        <a href="https://www.linkedin.com/in/katarina-kilian-645242313/" target="_blank" class="button">LinkedIn</a>
+      </div>
     </div>
+    
     <div class="member">
       <h3>Katalin Molnar</h3>
+      <img src="{% static 'images/team/kati.jpg' %}" alt="Katalin Molnar" onerror="this.src='{% static 'images/team/placeholder.jpg' %}'" width="150">
       <p>Fullstack</p>
-      <a href="https://github.com/molnarlin" target="_blank">GitHub</a> |
-      <a href="https://www.linkedin.com/in/katalin-molnar-b6a694165/" target="_blank">LinkedIn</a>
+      <div class="member-links">
+        <a href="https://github.com/molnarlin" target="_blank" class="button">GitHub</a>
+        <a href="https://www.linkedin.com/in/katalin-molnar-b6a694165/" target="_blank" class="button">LinkedIn</a>
+      </div>
     </div>
-    <div class="member">
-      <h3>Dimitri Edel</h3>
-      <p>Fullstack</p>
-      <a href="https://github.com/dimitri-edel" target="_blank">GitHub</a> |
-      <a href="https://www.linkedin.com/in/dimitri-edel-26a5022a9/" target="_blank">LinkedIn</a>
-    </div>
+    
     <div class="member">
       <h3>Zalak Shah</h3>
+      <img src="{% static 'images/team/zalak.jpg' %}" alt="Zalak Shah" onerror="this.src='{% static 'images/team/placeholder.jpg' %}'" width="150">
       <p>Fullstack</p>
-      <a href="https://github.com/zalak786" target="_blank">GitHub</a> |
-      <a href="https://www.linkedin.com/in/zalak-shah-3a1429342/" target="_blank">LinkedIn</a>
+      <div class="member-links">
+        <a href="https://github.com/zalak786" target="_blank" class="button">GitHub</a>
+        <a href="https://www.linkedin.com/in/zalak-shah-3a1429342/" target="_blank" class="button">LinkedIn</a>
+      </div>
     </div>
+    
     <div class="member">
       <h3>Daniel Sundqvist</h3>
+      <img src="{% static 'images/team/daniel.png' %}" alt="Daniel Sundqvist" onerror="this.src='{% static 'images/team/placeholder.jpg' %}'" width="150">
       <p>Fullstack</p>
-      <a href="https://github.com/Danielsudndqvist" target="_blank">GitHub</a> |
-      <a href="https://www.linkedin.com/in/daniel-sundqvist-b5bab4195/" target="_blank">LinkedIn</a>
+      <div class="member-links">
+        <a href="https://github.com/Danielsudndqvist" target="_blank" class="button">GitHub</a>
+        <a href="https://www.linkedin.com/in/daniel-sundqvist-b5bab4195/" target="_blank" class="button">LinkedIn</a>
+      </div>
     </div>
   </div>
 {% endblock %}
