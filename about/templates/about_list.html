@@ -8,21 +8,11 @@
 {% endblock %}
 
 {% block content %}
-<section class="desktop-background">
-  <div class="landing-screen window">
-    <div class="title-bar">
-      <div class="title-bar-text">Profiles of Women in Tech</div>
-      <div class="title-bar-controls">
-        <button aria-label="Close"></button>
-      </div>
-    </div>
-    <div class="window-body landing-body">
-      <p>Explore the pioneers who helped shape the digital age.</p>
-    </div>
-  </div>
-</section>
+<header class="page-header">
+  <h1> Women in Tech Hall of Fame</h1>
+</header>
 
-<section id="info-section" class="info-section">
+<section id="about-section" class="about-section">
   {% for about_profile in about_profiles %}
     <div class="info-card">
       <h3><a href="{% url 'about_detail' about_profile.pk %}">{{ about_profile.name }}</a></h3>

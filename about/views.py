@@ -1,6 +1,10 @@
 from django.shortcuts import render, get_object_or_404
 from .models import About
 
+def home(request):
+    about_profiles = About.objects.all()
+    return render(request, 'home.html' , {'about_profiles': about_profiles})
+
 def about_list(request):
     about_profiles = About.objects.all()
     return render(request, 'about_list.html', {'about_profiles': about_profiles})

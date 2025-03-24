@@ -1,19 +1,66 @@
-.about-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-  }
-  .profile-card {
-    width: 250px;
-    background: #fff8dc;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
-    text-align: center;
-  }
-  .profile-card img {
-    width: 100%;
-    border-radius: 8px;
-  }
-  
+/* About Section */
+.about-section {
+  padding: 40px 20px; /* Add padding around the section */
+  background: linear-gradient(135deg, #f5f5f5, #eaeaea); /* Subtle gradient background */
+  border-radius: 12px; /* Rounded corners for the section */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  text-align: center; /* Center-align the content */
+  margin: 20px auto; /* Center the section horizontally */
+  max-width: 1200px; /* Limit the width of the section */
+}
+
+/* Page Header */
+.page-header h1 {
+  font-size: 2.5rem; /* Large font size for the header */
+  color: #007BFF; /* Retro blue color */
+  font-family: 'Courier New', Courier, monospace; /* Retro font */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for emphasis */
+  margin-bottom: 30px;
+  text-transform: uppercase; /* Make the text uppercase */
+  letter-spacing: 2px; /* Add spacing between letters */
+}
+
+/* Info Card Container */
+.info-card {
+  background-color: #fff8dc; /* Light yellow background for cards */
+  border: 2px solid #007BFF; /* Blue border for the cards */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px;
+  margin: 10px;
+  width: 300px; /* Fixed width for cards */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  display: inline-block; /* Align cards horizontally */
+  vertical-align: top; /* Align cards properly */
+}
+
+/* Hover Effect for Info Card */
+.info-card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Info Card Title Link */
+.info-card h3 a {
+  color: #333; /* Dark gray for the link */
+  text-decoration: none; /* Remove underline */
+  font-size: 1.5rem; /* Readable font size */
+  font-weight: bold; /* Make the text bold */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover Effect for Title Link */
+.info-card h3 a:hover {
+  color: #007BFF; /* Change to blue on hover */
+  transform: scale(1.05); /* Slightly enlarge the text on hover */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add a subtle shadow effect */
+}
+
+/* Info Card Description */
+.info-card p {
+  font-size: 1rem; /* Standard font size for description */
+  line-height: 1.6; /* Improve readability */
+  color: #555; /* Medium gray for text */
+  margin-top: 10px;
+}
