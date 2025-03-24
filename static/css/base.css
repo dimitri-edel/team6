@@ -113,12 +113,14 @@ body {
 .retro-menu a {
   display: block;
   text-decoration: none;
-  color: var(--color-teal);
   font-size: 1.2rem;
   font-weight: bold;
   padding: 12px 24px;
   border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.6);
+  color: black;
+  background-color: white;
+  /* color: var(--color-teal);
+  background-color: rgba(0, 0, 0, 0.6); */
   transition: all 0.4s ease;
   border: 1px solid transparent;
   text-shadow: 0 0 5px rgba(0, 255, 221, 0.5);
@@ -217,7 +219,8 @@ body {
   }
 }
 .retro-main {
-  background: linear-gradient(135deg, #b5aba5, #9e90a9); /* Subtle gradient background */
+  /* background: linear-gradient(135deg, #b5aba5, #9e90a9);  */
+  background: var(--color-background);
   color: var(--color-white);
   padding: 40px;
   margin: 20px auto;
