@@ -5,6 +5,28 @@
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/home.css' %}">
+<style>
+  /* Remove underline from links in Helpful Resources */
+  #info-section .info-card ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    /* Set font weight to bold (optional) */
+    color: #8996b4;
+    /* Set color to black (optional) */
+  }
+
+  /* Optional: Add hover effect for better user experience */
+  #info-section .info-card ul li a:hover {
+    text-decoration: underline;
+    color: #007BFF;
+    /* Change color on hover (optional) */
+  }
+
+  /* Remove bullet points from a specific list */
+  #info-section ul {
+    list-style-type: none;
+  }
+</style>
 {% endblock %}
 
 {% block content %}
@@ -18,7 +40,8 @@
       {% endif %}
       <h3>{{ woman.name }}</h3>
       {% if woman.birth_date or woman.death_date %}
-      <p><strong>Born:</strong> {{ woman.birth_date }}{% if woman.death_date %} – <strong>Died:</strong> {{ woman.death_date }}{% endif %}</p>
+      <p><strong>Born:</strong> {{ woman.birth_date }}{% if woman.death_date %} – <strong>Died:</strong> {{
+        woman.death_date }}{% endif %}</p>
       {% endif %}
     </div>
     {% endfor %}
@@ -45,7 +68,8 @@
       <li><a href="https://nexttechgirls.com/" target="_blank">Empowering the Next Generation</a></li>
       <li><a href="https://www.womenintech.co.uk/" target="_blank">Career Choices & Guidance</a></li>
       <li><a href="https://wearetechwomen.com/" target="_blank">We Are Tech Women</a></li>
-      <li><a href="https://readfoundation.org.uk/appeals/empower-her/" target="_blank">Empower Her – Read Foundation</a></li>
+      <li><a href="https://readfoundation.org.uk/appeals/empower-her/" target="_blank">Empower Her – Read Foundation</a>
+      </li>
     </ul>
   </div>
 </section>

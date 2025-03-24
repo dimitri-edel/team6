@@ -27,7 +27,9 @@
   border-radius: 10px; /* Rounded corners */
   padding: 20px;
   margin: 10px;
-  width: 300px; /* Fixed width for cards */
+  width: 200px; /* Fixed width for cards */
+  height: 250px; /* Limit the height of the cards */
+  overflow: hidden; /* Hide overflow content */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
