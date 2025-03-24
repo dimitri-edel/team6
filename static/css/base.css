@@ -23,11 +23,11 @@ body {
   background-image: url('/static/images/hero.png'); /* Add your header image */
   background-size: cover; /* Ensures the image covers the entire header */
   background-repeat: no-repeat; /* Prevents the image from repeating */
-  background-position: top center; /* Centers the image horizontally and vertically */
+  background-position: center -40px; /* Centers the image horizontally and vertically */
   color: var(--color-white);
   text-align: center;
   padding: 50px 20px; /* Adjust padding for better spacing */
-  height: 250px; /* Set a fixed height for the header */
+  height: 150px; /* Set a fixed height for the header */
   display: flex;
   justify-content: center;
   align-items: center;
