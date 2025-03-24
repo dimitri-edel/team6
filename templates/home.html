@@ -6,6 +6,22 @@
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/home.css' %}">
 <style>
+  #info-section .info-card h2 {
+    font-size: 1.8rem;
+    /* Set font size to 1.5rem */
+    margin-bottom: 1rem;
+    /* Add margin below the heading */
+  }
+  #info-section .info-card p {       
+    padding: 1rem;
+    /* Add padding around the card */
+    margin-bottom: 1rem;
+    /* Add margin below the card */
+    border-radius: 5px;
+    /* Add rounded corners */
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
   /* Remove underline from links in Helpful Resources */
   #info-section .info-card ul li a {
     text-decoration: none;
@@ -49,8 +65,7 @@
 </section>
 
 <section id="info-section" class="info-section">
-  <div class="info-card">
-    <h3>Rippley: Women in Tech</h3>
+  <div class="info-card">    
     <p>Technology as we know it today exists because of the brilliant minds who dared to innovate...</p>
   </div>
   <div class="info-card">
@@ -63,7 +78,7 @@
     <p><strong>Start your journey.</strong> Honor our pioneers. And challenge what you know.</p>
   </div>
   <div class="info-card">
-    <h4>Helpful Resources</h4>
+    <h2>Helpful Resources</h2>
     <ul>
       <li><a href="https://nexttechgirls.com/" target="_blank">Empowering the Next Generation</a></li>
       <li><a href="https://www.womenintech.co.uk/" target="_blank">Career Choices & Guidance</a></li>

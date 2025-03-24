@@ -1,7 +1,9 @@
 # RIPPLEY
 
 ## Deployed page
-[deployed page](https://rippley-c75929cecc2a.herokuapp.com/)
+[Open deployed page](https://rippley-c75929cecc2a.herokuapp.com/)
+
+![responsive styles](/documentation/presentation.png)
 
 ## Purpose of the project 
 Our mission is to celebrate the incredible achievements of women in the tech industry throughout history by creating an engaging online Hall of Fame. Through interactive quizzes and small biographies, we aim to honor these pioneers, showcase their groundbreaking contributions, and inspire the world to learn more about their remarkable journeys. Dive in, have fun, and join us in spreading their stories far and wide!
