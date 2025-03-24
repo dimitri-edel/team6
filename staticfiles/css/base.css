@@ -20,7 +20,7 @@ body {
 
 /* Header Styles */
 .retro-header {
-  background-image: url('/static/images/over-the-yearsii.jpg'); /* Add your header image */
+  background-image: url('/static/images/hero.png'); /* Add your header image */
   background-size: cover; /* Ensures the image covers the entire header */
   background-repeat: no-repeat; /* Prevents the image from repeating */
   background-position: top center; /* Centers the image horizontally and vertically */
@@ -48,7 +48,6 @@ body {
   overflow: hidden;
 }
 .retro-menu::before {
-  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -217,46 +216,24 @@ body {
     flex: 1 1 100%;
   }
 }
-
-/* Retro Main Section */
 .retro-main {
-  background: linear-gradient(135deg, #BB6E3A, #4b0082); /* Subtle gradient background */
-  padding: 40px 20px;
-  border-radius: 8px; /* Rounded corners for a retro feel */
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  background: linear-gradient(135deg, #b5aba5, #9e90a9); /* Subtle gradient background */
+  color: var(--color-white);
+  padding: 40px;
   margin: 20px auto;
-  width: 90%; /* Center the section and limit its width */
-  color: var(--color-white);
-  text-align: center;
-}
-
-/* Main Content Section */
-.main-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #000; /* Retro black background */
+  width: 90%;
+  box-shadow: 0 0 15px rgba(0, 255, 221, 0.4);
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
-}
-
-/* Typography */
-.main-content h1, .main-content h2, .main-content h3 {
-  font-family: 'Courier New', Courier, monospace; /* Retro font */
-  color: var(--color-primary); /* Bright orange for headings */
-  margin-bottom: 20px;
-}
-
-.main-content p {
-  font-size: 1.2rem;
   line-height: 1.6;
-  color: var(--color-white);
-  margin-bottom: 20px;
+  text-align: center;
+
 }
+
+
 
 /* Buttons */
 .main-content .btn {
-  background-color: var(--color-primary);
+  background-color : var(--color-primary);
   color: var(--color-dark);
   border: none; /* Removed border */
   padding: 10px 20px;

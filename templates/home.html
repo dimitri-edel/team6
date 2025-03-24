@@ -8,47 +8,35 @@
 {% endblock %}
 
 {% block content %}
-
-<section class="desktop-background">
-  <div class="landing-screen window">
-    <div class="title-bar">
-      <div class="title-bar-text">Rippley: Women in Tech</div>
-      <div class="title-bar-controls">
-        <button aria-label="Close"></button>
-      </div>
+<section id="women-profiles" class="profile-section">
+  <h2>Women in Tech – From 1800s to World War II</h2>
+  <div class="profile-carousel">
+    {% for woman in women_profiles %}
+    <div class="profile-card">
+      {% if woman.image %}
+      <img src="{{ woman.image.url }}" alt="{{ woman.name }}">
+      {% endif %}
+      <h3>{{ woman.name }}</h3>
+      {% if woman.birth_date or woman.death_date %}
+      <p><strong>Born:</strong> {{ woman.birth_date }}{% if woman.death_date %} – <strong>Died:</strong> {{ woman.death_date }}{% endif %}</p>
+      {% endif %}
     </div>
-    <div class="window-body landing-body">
-      <p>Celebrating the pioneers of innovation.</p>
-      <button class="btn-explore" onclick="document.getElementById('info-section').scrollIntoView({ behavior: 'smooth' })">
-        🚀 Explore the Site
-      </button>
-    </div>
+    {% endfor %}
   </div>
 </section>
 
-<section id="info-section" class="info-section">
-  <div class="info-card">
-    <h3>Rippley: Women in Tech</h3>
-    <p>Technology as we know it today exists because of the brilliant minds who dared to innovate...</p>
-  </div>
-  <div class="info-card">
-    <p>From Ada Lovelace to Radia Perlman, from WWII codebreakers to today’s AI leaders — discover their stories.</p>
-  </div>
-  <div class="info-card">
-    <p>Explore. Test your knowledge. Be inspired. This is more than a tribute — it’s a legacy in motion.</p>
-  </div>
-  <div class="info-card">
-    <p><strong>Start your journey.</strong> Honor our pioneers. And challenge what you know.</p>
-  </div>
-  <div class="info-card">
-    <h4>Helpful Resources</h4>
-    <ul>
-      <li><a href="https://nexttechgirls.com/" target="_blank">Empowering the Next Generation</a></li>
-      <li><a href="https://www.womenintech.co.uk/" target="_blank">Career Choices & Guidance</a></li>
-      <li><a href="https://wearetechwomen.com/" target="_blank">We Are Tech Women</a></li>
-      <li><a href="https://readfoundation.org.uk/appeals/empower-her/" target="_blank">Empower Her – Read Foundation</a></li>
-    </ul>
-  </div>
-</section>
-
+<script>
+  $(document).ready(function () {
+    $('.profile-carousel').slick({
+      slidesToShow: 3, /* Show 3 profiles at a time */
+      slidesToScroll: 1, /* Scroll one profile at a time */
+      autoplay: true, /* Enable auto-scrolling */
+      autoplaySpeed: 3000, /* Set auto-scroll speed to 3 seconds */
+      dots: true, /* Show navigation dots */
+      arrows: true, /* Show navigation arrows */
+      infinite: true, /* Enable infinite scrolling */
+      pauseOnHover: true, /* Pause auto-scroll on hover */
+    });
+  });
+</script>
 {% endblock %}

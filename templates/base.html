@@ -7,6 +7,10 @@
   <link rel="stylesheet" href="{% static 'css/base.css' %}">
   <link rel="shortcut icon" href="{% static 'images/favicon.march/favicon.ico' %}" type="image/x-icon">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 <body>
   <header class="retro-header">
@@ -19,6 +23,7 @@
       <li><a href="/" class="{% if request.path == '/' %}active{% endif %}">Home</a></li>
       <li><a href="/about/" class="{% if '/about/' in request.path %}active{% endif %}">About</a></li>
       <li><a href="/quizzes/" class="{% if '/quizzes/' in request.path %}active{% endif %}">Quiz</a></li>
+      <li><a href="/team/" class="{% if '/team/' in request.path %}active{% endif %}">Team</a></li>
     </ul>
   </nav>
 
@@ -29,9 +34,13 @@
       {% endblock %}
     </section>
   </main>
+   <!-- Include jQuery and Slick Carousel -->
+   
 
   <footer class="retro-footer">
     <p>&copy; 2025 Women in Tech Hall of Fame. All rights reserved.</p>
   </footer>
+
+ 
 </body>
 </html>
